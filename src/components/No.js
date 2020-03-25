@@ -1,7 +1,7 @@
 import React from 'react';
 
 function No() {
-    return <section>No.</section>
+    return <article>No.</article>
 }
 
 export default No;

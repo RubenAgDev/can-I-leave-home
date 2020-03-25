@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Yes() {
-    return <section>"Yes."</section>
+    return <article>Yes.</article>
 }
 
 export default Yes;
