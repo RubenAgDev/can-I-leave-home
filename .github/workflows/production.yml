@@ -21,7 +21,7 @@ jobs:
         npm ci
     - name: Unit Tests
       run: |
-        npm run test
+        npm run test:ci
     - name: Production Build
       run: |
         npm run build
@@ -30,6 +30,7 @@ jobs:
       with:
         args: --acl public-read --delete
       env:
+        REACT_APP_GOOGLE_UA_ID: ${{ secrets.REACT_APP_GOOGLE_UA_ID }}
         AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
